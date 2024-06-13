@@ -41,6 +41,7 @@ const AddSignup = () => {
       }
   return (
     <div>
+        <center><h2>REGISTER</h2></center>
         <div className="conatiner">
             <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                 <div className="row g-3">
@@ -70,7 +71,7 @@ const AddSignup = () => {
                     </div>
                     <center>
                     <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                        <button class="btn btn-info" onClick={readValue}>SEARCH</button>
+                        <button class="btn btn-info" onClick={readValue}>REGISTER</button>
                     </div>
                     </center>
                     <div>

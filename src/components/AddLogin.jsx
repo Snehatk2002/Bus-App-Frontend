@@ -29,6 +29,7 @@ const AddLogin = () => {
       }
   return (
     <div>
+        <center><h2>LOGIN</h2></center>
         <div className="container">
             <div className="row">
                 <div className="col col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
