@@ -76,6 +76,7 @@ const AddSignup = () => {
                     <div>
                     <center>
                     <Link class="nav-link" to="/">LOGIN</Link>
+                    <Link class="nav-link" to="/add">ADD BUSES</Link>
                     </center>
                     </div>
                 </div>
