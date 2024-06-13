@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const AddSignup = () => {
     const [data, setdata] = useState(
@@ -26,7 +26,9 @@ const AddSignup = () => {
                 console.log(response.data)
                 if (response.data.status=="success")
                  {
-                    alert("SUCCESSFULLY ADDED")
+                 sessionStorage.setItem("token",response.data.token)
+                 sessionStorage.setItem("userid",response.data.userid)
+                 navigate("/add")
                 } else {
                     alert("ERROR")
                 }
@@ -39,6 +41,7 @@ const AddSignup = () => {
             alert("error in password")
         }
       }
+      let navigate =useNavigate()
   return (
     <div>
         <center><h2>REGISTER</h2></center>
@@ -77,7 +80,6 @@ const AddSignup = () => {
                     <div>
                     <center>
                     <Link class="nav-link" to="/">LOGIN</Link>
-                    <Link class="nav-link" to="/add">ADD BUSES</Link>
                     </center>
                     </div>
                 </div>
