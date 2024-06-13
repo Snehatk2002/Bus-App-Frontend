@@ -1,7 +1,9 @@
+import axios from 'axios'
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const AddLogin = () => {
-    const [data, setdata] = useState(
+    const [data,setdata] = useState(
         {
             "email":" ",
             "password":" "
@@ -12,6 +14,18 @@ const AddLogin = () => {
       }
       const readValue=()=>{
           console.log(data)
+          axios.post("http://localhost:8080/signin",data).then(
+            (response)=>{
+                console.log(response.data)
+                if (response.data.status=="success")
+                 {
+                    alert("SUCCESSFULLY ADDED")
+                } else {
+                    alert("ERROR")
+                }
+            }
+        ).catch()
+        
       }
   return (
     <div>
@@ -32,6 +46,11 @@ const AddLogin = () => {
                             <button class="btn btn-success" onClick={readValue}>LOGIN</button>
                         </div>
                         </center>
+                        <div>
+                        <center>
+                        <Link class="nav-link" to="/signup">SIGNUP</Link>
+                        </center>
+                        </div>
                     </div>
                 </div>
             </div>
